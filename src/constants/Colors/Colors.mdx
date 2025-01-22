@@ -1,0 +1,137 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
+
+# Colors
+
+<Meta title="Design/Colors"/>
+
+## Surface
+
+Surface colors are employed for interface elements, including backgrounds and disabled elements.
+
+<ColorPalette>
+  <ColorItem 
+    title="color.background" 
+    colors={{ 'Ash-500': '#F5F5F4' }} 
+  />
+  <ColorItem 
+    title="color.light" 
+    colors={{ 'Ash-50': '#FFFFFF' }} 
+  />
+  <ColorItem 
+    title="color.primary" 
+    colors={{ 'Supernova-500': '#FEC307' }} 
+  />
+  <ColorItem 
+    title="color.secondary" 
+    colors={{ 'Mako-500': '#36383D' }} 
+  />
+  <ColorItem 
+    title="color.tertiary" 
+    colors={{ 'Mako-100': '#D8D8D7' }} 
+  />
+</ColorPalette>
+
+# Primary
+
+When we need to stand out a little more, the yellow plays an important role. Just remember, the yellow must be balanced with a proper use of the black to maintain our masculine character.
+
+<ColorPalette>
+  <ColorItem 
+    title="theme.color.primary"
+    subtitle="Supernova"
+    colors={{ 
+      '50': '#FFF9E6', '100': '#FFF3CD', '200': '#FFE79C', '300': '#FEDB6A', 
+      '400': '#FECF39', '500': '#fec307', '600': '#CB9C06', '700': '#987504', 
+      '800': '#664E03', '900': '#332701', '950': '#000' }} 
+  />
+</ColorPalette>
+
+# Secondary
+
+For the most part, black (MAKO) and white are the hero's of the GameSheet image. Mako is used for primary text, borders, and background accents. Mako 5 is used for disabled CTAs, Ash is used as the text color on Mako.
+
+<ColorPalette>
+  <ColorItem 
+    title="theme.color.secondary" 
+    subtitle="Mako"
+    colors={{ 
+      '50': '#D7D7D8', '100': '#AFAFB1', '200': '#86888B', '300': '#8A8B86', 
+      '400': '#5E6064', '500': '#36383D', '600': '#2B2D31', '700': '#202225', 
+      '800': '#161618', '900': '#0B0B0C', '950': '#000' }} 
+  />
+</ColorPalette>
+
+# Contrast
+
+Ash should be used as a contrast color with the Mako - text being the biggest use. Also primary background color for pages.
+
+<ColorPalette>
+  <ColorItem 
+    title="theme.color.ash"
+    subtitle="Ash" 
+    colors={{ 
+      '50': '#FFFFFF', '100': '#FDFDFC', '200': '#FAFAFA', '300': '#F8F8F7', 
+      '400': '#F8F8F7', '500': '#F5F5F4', '600': '#C7C7C2', '700': '#99998F', 
+      '800': '#66665C', '900': '#33332E', '950': '#1B1B18' }} 
+  />
+</ColorPalette>
+
+# Live Blue
+
+Blue is to be used for live events happening. It will be used for secondary actions and highlights throughout the platform.
+
+<ColorPalette>
+  <ColorItem 
+    title="theme.color.liveBlue"
+    subtitle="Cornflower" 
+    colors={{ 
+      '50': '#EDF9FF', '100': '#D7EFFF', '200': '#B9E4FF', '300': '#88D5FF', 
+      '400': '#50BDFF', '500': '#289CFF', '600': '#097AFF', '700': '#0a66eb', 
+      '800': '#0F52BE', '900': '#134895', '950': '#112D5A' }} 
+  />
+</ColorPalette>
+
+# Success
+
+Success colors primary purpose is to confirm to the user that an action has been executed successfully.
+
+<ColorPalette>
+  <ColorItem 
+    title="theme.color.success"
+    subtitle="Apple" 
+    colors={{ 
+      '50': '#F2FCF1', '100': '#E0F9DF', '200': '#C2F2C0', '300': '#92E590', 
+      '400': '#5AD157', '500': '#34B731', '600': '#269623', '700': '#21761F', 
+      '800': '#1D5E1D', '900': '#1A4D1A', '950': '#092A0A' }} 
+  />
+</ColorPalette>
+
+# Error
+
+The Error color is used to indicate errors, such as marking a required field in a text field.
+
+<ColorPalette>
+  <ColorItem 
+    title="theme.color.error"
+    subtitle="Punch" 
+    colors={{ 
+      '50': '#FBE9EB', '100': '#F8D8DB', '200': '#F1ACB3', '300': '#EA858F', 
+      '400': '#E35E6B', '500': '#DC3545', '600': '#BB2030', '700': '#881824', 
+      '800': '#5B1017', '900': '#30080C', '950': '#160406' }} 
+  />
+</ColorPalette>
+
+# Accent
+
+Orange is another accent color that you can use to make things stick out as needed.
+
+<ColorPalette>
+  <ColorItem 
+    title="theme.color.orange"
+    subtitle="Orange" 
+    colors={{ 
+      '50': '#FFF1EB', '100': '#FFE3D6', '200': '#FFC4A8', '300': '#FFA880', 
+      '400': '#F89552', '500': '#FF6926', '600': '#EB4A00', '700': '#B33900', 
+      '800': '#752500', '900': '#3D1300', '950': '#1F0A00' }} 
+  />
+</ColorPalette>

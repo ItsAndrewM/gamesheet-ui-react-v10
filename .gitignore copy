@@ -1,0 +1,18 @@
+node_modules
+dist
+
+#storybook build directory
+storybook-static
+*storybook.log
+
+#local files
+.npmrc
+src/.DS_Store
+.DS_Store
+
+#test artifacts
+test-results
+playwright-report-storybook-component-tests
+.env
+automated-tests-runner-key.json
+

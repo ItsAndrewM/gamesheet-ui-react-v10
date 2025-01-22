@@ -1,0 +1,61 @@
+import { Meta, IconGallery, IconItem } from '@storybook/blocks';
+
+<Meta title="Design/Iconography" />
+
+import * as Icons from './icons'; // This will dynamically import all icons
+
+# Icons
+
+## Sizes
+
+<table>
+<thead>
+    <tr>
+        <th>xl</th>
+        <th>lg</th>
+        <th>md</th>
+        <th>sm</th>
+        <th>xs</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><Icons.AcceptIcon size="xl" /></td>
+        <td><Icons.AcceptIcon size="lg" /></td>
+        <td><Icons.AcceptIcon size="md" /></td>
+        <td><Icons.AcceptIcon size="sm" /></td>
+        <td><Icons.AcceptIcon size="xs" /></td>
+    </tr>
+</tbody>
+</table>
+
+## Variants
+
+<table>
+<thead>
+    <tr>
+        <th>filled</th>
+        <th>outlined</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><Icons.AcceptIcon variant="filled" /></td>
+        <td><Icons.AcceptIcon variant="outlined" /></td>
+    </tr>
+</tbody>
+</table>
+
+## All Icons
+<IconGallery>
+{Object.keys(Icons).map((iconKey) => {
+  const IconComponent = Icons[iconKey];
+  return (
+    <>
+        <IconItem name={iconKey}>
+            <IconComponent variant="filled" />
+        </IconItem>
+    </>
+  );
+})}
+</IconGallery>

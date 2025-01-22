@@ -1,0 +1,21 @@
+export type Player = {
+    id?: string;
+    firstName: string;
+    lastName: string;
+    jersey: string;
+    position: string;
+    status: string;
+    designation: string;
+    month: string;
+    day: string;
+    year: string;
+    shotHand: string;
+    height: string;
+    weight: string;
+    draftedBy: string;
+    committedTo: string;
+    country: string;
+    state: string;
+    city: string;
+    bio: string;
+};

@@ -1,0 +1,3 @@
+@gamesheet:registry=https://gitlab.com/api/v4/packages/npm/
+//gitlab.com/api/v4/packages/npm/:_authToken={npm_token}
+//gitlab.com/api/v4/projects/62197293/packages/npm/:_authToken={npm_token}

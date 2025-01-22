@@ -1,0 +1,45 @@
+default:
+  image: node:22.8.0
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+    - npm run build-storybook
+  artifacts:
+    paths:
+      - dist/
+      - storybook-static/
+      - package.json
+      - package-lock.json
+    expire_in: 1 hour
+
+pages:
+  stage: deploy
+  needs:
+    - build
+  script:
+    - mkdir public
+    - cp -r storybook-static/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+    - develop
+
+publish-npm:
+  stage: deploy
+  only:
+    - main
+  needs:
+    - build
+  script:
+    - echo "@gamesheet:registry=https://${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/" > .npmrc
+    - echo "//${CI_SERVER_HOST}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}" >> .npmrc
+    - npm publish

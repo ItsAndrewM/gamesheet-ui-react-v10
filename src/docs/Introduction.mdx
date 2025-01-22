@@ -1,0 +1,190 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="GameSheet Design System" />
+
+# GameSheet Design System
+
+<iframe
+    src="https://drive.google.com/file/d/1TariQUbOx2N7Dey6XjLPnqDsmRnfZFMu/preview"
+    width="100%"
+    height="535"
+    allow="autoplay"
+></iframe>
+
+# @gamesheet/ui-v10
+
+A Preact-based UI component library implementing Atomic Design principles with comprehensive theming and customization options.
+
+## Legend
+
+- 🟪 Template
+- 🟨 Biome
+- 🟩 Organism
+- 🟦 Molecule
+- 🟥 Atom
+
+## Features
+
+-   🏗️ Built on Preact with TypeScript support
+-   🎨 Styled Components for styling and theming
+-   📚 Comprehensive Storybook documentation
+-   ⚛️ Atomic Design architecture
+-   🧪 Vitest testing suite
+-   📦 Modern build tooling with Vite
+
+## Installation
+
+This package is hosted on GitLab's package registry. First, authenticate with the registry:
+
+```bash
+npm config set @gamesheet:registry https://gitlab.com/api/v4/projects/62197293/packages/npm/
+```
+
+Then install the package:
+
+```bash
+npm install @gamesheet/ui-v10
+```
+
+### Peer Dependencies
+
+The library requires the following peer dependencies:
+
+```json
+{
+    "@preact/signals": "^1.3.0",
+    "preact": "^10.24.3"
+}
+```
+
+## Architecture
+
+The library follows Atomic Design principles with the following structure:
+
+```
+src/
+  ├── atomic/
+  │   ├── atoms/       # Basic building blocks
+  │   ├── molecules/   # Combinations of atoms (e.g., TabView)
+  │   ├── organisms/   # Complex components (e.g., Modal)
+  │   └── biomes/      # Flow components and features
+  ├── constants/
+  │   ├── colors/      # Color definitions and palettes
+  │   ├── typography/  # Typography rules and styles
+  │   ├── breakpoints/ # Responsive breakpoints
+  │   └── icons/       # Icon components
+  ├── themes/          # Theme definitions
+  └── fonts/          # Font assets
+```
+
+### Design System
+
+#### Colors
+
+The library implements a comprehensive color system with semantic colors:
+
+-   **Primary**: Supernova (Yellow) - Brand accent color
+-   **Secondary**: Mako (Black) - Primary text and borders
+-   **Ash**: Light backgrounds and contrast elements
+-   **Live Blue**: Used for live events and secondary actions
+-   **Success**: Confirmation and success states
+-   **Error**: Error states and required fields
+-   **Orange**: Additional accent color
+
+Each color includes a full range of variations (50-950).
+
+#### Typography
+
+Three main font families are used:
+
+-   **Kapra Neue Pro**: Headers and display text
+-   **Pitch Sans Medium**: Titles and subheadings
+-   **Rubik**: Body text and general content
+
+Font sizes are standardized across different text styles:
+
+-   Headers: 2XL (3.75rem) to Tiny (1rem)
+-   Titles: L (1.25rem) to XS (0.75rem)
+-   Body: L (1.125rem) to XXS (10px)
+
+#### Breakpoints
+
+```
+xs: 0 - 576px    (Mobile)
+sm: 576 - 767px  (Mobile)
+md: 768 - 991px  (Tablet)
+lg: 1024 - 1199px (Desktop)
+xl: 1200px+      (Large Desktop)
+```
+
+### Icons
+
+The library includes a comprehensive set of customizable icons with:
+
+-   Size variants: xs, sm, md, lg, xl
+-   Style variants: filled, outlined
+-   Custom color support
+
+## Development
+
+### Available Scripts
+
+-   `format`: Format code with Prettier
+-   `lint`: Run ESLint with automatic fixes
+-   `build`: Build library with TypeScript and Vite
+-   `test`: Run Vitest test suite
+-   `test-watch`: Run tests in watch mode
+-   `test:ui`: Run tests with UI
+-   `storybook`: Start Storybook development server (port 6006)
+-   `build-storybook`: Build static Storybook
+-   `will-commit`: Run pre-commit checks with lint-staged
+
+### Contributing
+
+1. Install development dependencies:
+
+    ```bash
+    npm install
+    ```
+
+2. Follow the development workflow:
+
+    - Write code following TypeScript and ESLint rules
+    - Add/update tests using Vitest
+    - Document components in Storybook
+    - Use `git cz` for commits (Commitizen)
+
+3. Pre-commit checks:
+    - Formatting with Prettier
+    - Linting with ESLint
+    - Tests must pass
+
+### Storybook
+
+The library uses Storybook 8.4 with the following addons:
+
+-   Actions
+-   Designs
+-   Essentials
+-   Interactions
+-   Links
+-   Themes
+-   MDX Support
+
+To start Storybook:
+
+```bash
+npm run storybook
+```
+
+## Publishing
+
+This package is published to GitLab's package registry. Ensure you're authenticated with the correct registry:
+
+```
+@gamesheet:registry=https://gitlab.com/api/v4/projects/62197293/packages/npm/
+```
+
+## License
+
+ISC
