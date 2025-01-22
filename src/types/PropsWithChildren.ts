@@ -1,4 +1,7 @@
-import { ComponentChild } from "preact";
+import { ReactNode } from "react";
 
-export type PropsWithChildren<P = unknown> = P & { children: ComponentChild };
-export type PropsWithOptionalChildren<P = unknown> = P & { children?: ComponentChild };
+// For required children
+export type PropsWithChildren<P = unknown> = P & { children: ReactNode };
+
+// For optional children
+export type PropsWithOptionalChildren<P = unknown> = P & { children?: ReactNode };

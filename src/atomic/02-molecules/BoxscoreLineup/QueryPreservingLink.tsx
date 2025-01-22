@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "preact/compat";
+import { PropsWithChildren } from "react";
 
 export const QueryPreservingLink = ({
     href,
